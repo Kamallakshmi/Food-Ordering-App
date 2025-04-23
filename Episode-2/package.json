@@ -1,0 +1,23 @@
+{
+  "name": "react-series",
+  "version": "1.0.0",
+  "description": "Leanring React",
+  "scripts": {
+    "test": "Jest"
+  },
+  "author": "Kamal",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/Kamallakshmi/React-series.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
