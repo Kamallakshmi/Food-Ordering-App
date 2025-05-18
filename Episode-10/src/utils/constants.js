@@ -1,0 +1,10 @@
+export const CDN_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+export const LOGO_URL =
+  "https://static.vecteezy.com/system/resources/previews/007/500/121/non_2x/food-delivery-icon-clip-art-logo-simple-illustration-free-vector.jpg";
+
+// in 1 file i can export 1 default. I cant export multiple default export. Solution - "Named export"
+
+export const MENU_API =
+  "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0843007&lng=80.2704622&restaurantId=";
