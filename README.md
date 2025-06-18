@@ -138,7 +138,7 @@ This project includes unit and integration tests to ensure the stability and cor
 If you found this repository helpful, feel free to connect with me:
 
 - 🌐 [GitHub](https://github.com/kamallakshmi)
-- 💼 [LinkedIn](htthttps://www.linkedin.com/in/kamal-ramesh/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/kamal-ramesh/)
 - 🐦 [Medium](https://medium.com/@Kamalramesh)
 
 Let's collaborate and build amazing projects together! 🤝
