@@ -133,8 +133,12 @@ This project includes unit and integration tests to ensure the stability and cor
 | `Search`         | Search bar functionality and filtered results    |
 | `sum.js`         | Sample utility logic for demo unit test          |
 
-### 🧪 Sample Test Command
+## 📬 Let's Connect
 
-```bash
-npm test
-```
+If you found this repository helpful, feel free to connect with me:
+
+- 🌐 [GitHub](https://github.com/kamallakshmi)
+- 💼 [LinkedIn](htthttps://www.linkedin.com/in/kamal-ramesh/)
+- 🐦 [Medium](https://medium.com/@Kamalramesh)
+
+Let's collaborate and build amazing projects together! 🤝
