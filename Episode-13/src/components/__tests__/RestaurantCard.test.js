@@ -22,7 +22,7 @@ it("Should render RestaurantCard with promoted label from HOC", () => {
   render(<PromotedRestaurantCard resData={MOCK_DATA} />);
 
   // Check if promotion label is rendered correctly
-  const promoLabel = screen.getByText((text) => text.includes("40% OFF"));
+  const promoLabel = screen.getByText((text) => text.includes("FLAT DEAL"));
 
   expect(promoLabel).toBeInTheDocument();
 });

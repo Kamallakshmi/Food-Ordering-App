@@ -46,7 +46,7 @@ const Body = () => {
   const fetchData = async () => {
     // fetch will return a promise. we have to resolve a promise either using .then catch to hadle error or async/await(better approach)
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=13.0843007&lng=80.2704622&carousel=true&third_party_vendor=1"
+      "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=13.0843007&lng=80.2704622&carousel=true&third_party_vendor=1"
     ); // fetch is the super power given by broswer(JS engine have),this fetch() will fecth data from API.
     //https://corsproxy.io/?  -- By add this i make a call to corsproxy then corsproxy make an api call to swiggy so i wont get cors error even wihtout using cors extension
     const json = await data.json(); // convert readable data to json
@@ -76,9 +76,9 @@ const Body = () => {
   return ListOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter flex">
-        <div className="search m-4 p-4">
+    <div className="body px-6 py-4">
+      <div className="filter flex flex-wrap justify-between gap-4 mb-6 bg-white p-4 rounded-lg shadow-sm">
+        <div className="flex gap-2 items-center">
           {/* Intailly if we set value = {searchText} whatever we type in textbox the value wont display becuase the initial value of searchtext is we set to null in useState. 
           so we have to update the value of searchText to the value of what we typing in search bar for that 
                 - check we are typing -- event handler -- onChange ( if event oocures measn if we type anything we call setSearchText and pass those typing values then it will saved in searchText)
@@ -89,14 +89,14 @@ const Body = () => {
           <input
             type="text"
             data-testid="searchInput" // added for testing purpose(to use getByTextId)
-            className="border border-solid border-black "
+            className="border border-gray-300 rounded-md px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="px-4 py-1 bg-orange-700 m-4 text-white  rounded-lg"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md transition"
             onClick={() => {
               //Filter the restaurant cards and update the UI
               //need search text (get the value of text box then only we search) -- it is stored in the state variable 'searchText'
@@ -110,11 +110,9 @@ const Body = () => {
           >
             Search
           </button>
-        </div>
 
-        <div className="m-4 p-4 flex items-center">
           <button
-            className="px-4 py-1 bg-yellow-400 rounded-lg"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-md transition"
             onClick={() => {
               // way to update the setListOfRestaurant is to call the function and pass the new data to push into it.
               // Filter Logic here(where rating of restaurants is higher)
@@ -125,21 +123,21 @@ const Body = () => {
               //console.log(ListOfRestaurants); // Data is filtered but UI is not updated without using hook usestate() we can simply check it by clg.
             }}
           >
-            Top Rated Button
+            Top Rated
           </button>
         </div>
 
-        <div className="m-4 p-4 flex items-center">
-          <label>Username </label>
+        <div className="flex items-center gap-2">
+          <label className="font-medium">Username </label>
           <input
             type="text"
-            className="border border-black p-2"
+            className="border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none"
             onChange={(e) => setUserName(e.target.value)} //onchage we have to set my username
             value={loggedInUser}
           />
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {/* // Why separate component for card? we have to make our code modular, means there is lot of cards in this project so we have to create separate card component */}
         {/* ! Component is basically funciton, we use function while we have to do repitation task like same if there is repitation is code we have to use separate component */}
         {

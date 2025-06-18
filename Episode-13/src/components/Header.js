@@ -42,43 +42,43 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between bg-orange-400 shadow-lg m-2">
-      <div className="logo-container">
+    <div className="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-10">
+      <div className="flex items-center gap-4">
         <img
-          className="w-56 "
+          className="w-20 object-contain"
           src={LOGO_URL} // LOGO_URL is the JS constant variable contains url link. How to right JS inside JSX? Using {}
         />
       </div>
-      <div className="flex items-center">
-        <ul className="flex p-10 m-5">
-          <li className="px-4">
+      <div className="flex items-center gap-8 text-sm font-medium text-gray-700">
+        <ul className="flex items-center gap-6">
+          <li className="text-green-600 font-semibold">
             Online Status: {onlineStatus ? "Online" : "Offline"}
           </li>
-          <li className="px-4">
+          <li className="hover:text-orange-500 transition">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-4">
+          <li className="hover:text-orange-500 transition">
             <Link to="/about">About Us</Link>
             {/* // In react to route to other page dont use anchor tag. RSN whole page got refreshed. SOLUTION - We can navigate to new page wihtout reloading the whole page. */}
           </li>
-          <li className="px-4">
+          <li className="hover:text-orange-500 transition">
             <Link to="/contact">Contact Us</Link>
             {/* // This wont reload the whole page. It just changing the component */}
           </li>
-          <li className="px-4">
+          <li className="hover:text-orange-500 transition">
             <Link to="/grocery">Grocery</Link>
             {/* // This wont reload the whole page. It just changing the component */}
           </li>
 
           {/* // We are going to show how many items are there in cart */}
-          <li className="px-4 font-semibold text-lg">
+          <li className="text-gray-900 font-semibold hover:text-orange-500 transition">
             <Link to="/cart">Cart ({cartItems.length} items)</Link>
           </li>
           {/* Basically we are showing why useState() and useEffect() are important. 
           For that we creating a button when we click the button login changed to logout and vice versa
           */}
           <button
-            className="login"
+            className="px-4 py-1 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition"
             onClick={() => {
               //btnNameReact = "Logout";//! we cant directly modify the state variable
               btnNameReact === "Login"
@@ -91,7 +91,7 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
-          <li className="px-4 font-semibold">
+          <li className="font-semibold text-gray-800">
             <Link to="/cart">{loggedInUser}</Link>
           </li>
         </ul>

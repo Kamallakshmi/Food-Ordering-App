@@ -22,18 +22,25 @@ const RestaurantCard = (props) => {
     // < className="res-card" style={{backgroundColor: "#f0f0f0"}}> Also write js object directly inside JSX put one more extra {}
     <div
       data-testid="resCard" // for testing purpose
-      className="m-4 p-4 w-[250px] bg-gray-100 hover:bg-gray-300"
+      className="m-3 p-4 w-[250px] rounded-lg bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
       // style={styleCard}
     >
-      <img className="rounded-r-lg" src={CDN_URL + cloudinaryImageId} />
+      <img
+        className="w-full h-40 object-cover rounded-md mb-4"
+        src={CDN_URL + cloudinaryImageId}
+      />
       {/* // To make the card component dynamically fetch the data we should read the prop what we geting. You know props is in form of JS object. so inside JSX we sdhould put js code insie {} */}
       {/* <h3>{props.resName}</h3>
         <h4>{props.cuisine}</h4> */}
-      <h3 className="font-bold py-4 text-lg">{name}</h3>
-      <h4>{cuisines?.join(", ")}</h4>
-      <h4>{avgRating}</h4>
-      <h4>{costForTwo}</h4>
-      <h4>User : {loggedInUser}</h4>
+      <h3 className="font-bold text-lg text-gray-800 mb-1 truncate">{name}</h3>
+      <h4 className="text-sm text-gray-600 mb-1">
+        {cuisines?.slice(0, 3).join(", ")}
+      </h4>
+      <div className="flex justify-between items-center text-sm text-gray-700 mt-2">
+        <span className="font-medium">⭐ {avgRating}</span>
+        <span>{costForTwo}</span>
+      </div>
+      {/* <div className="text-xs text-gray-500 mt-2">User: {loggedInUser}</div> */}
     </div>
   );
 };
@@ -47,7 +54,8 @@ export const withPromotedLabel = (RestaurantCard) => {
     return (
       <div className="relative">
         <label className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 text-xs rounded">
-          {props.resData?.info?.aggregatedDiscountInfoV3?.header || "PROMO"}
+          {props.resData?.info?.aggregatedDiscountInfoV3?.discountTag ||
+            props.resData?.info?.aggregatedDiscountInfoV3?.subHeader}
         </label>
         <RestaurantCard {...props} />
         {/* we have to use spread operator to access all the properties inside the restaurant */}
