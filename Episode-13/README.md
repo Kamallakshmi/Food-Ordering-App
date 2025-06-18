@@ -1,66 +1,67 @@
-<!-- Structure of the components
-Header
-    -Logo
-    -Nav Items
-Body
-    -Search
-    -RestaurantContainer
-        -RestaurantCard
-        -img
-        -Name of Res, Star rating, cuisine, deilvery time..
-Footer
-    -Copyright
-    -Links
-    -Address
-    -Contact -->
+# 🍽️ React Food Ordering App
 
-Two types of Export/Import
+A responsive and dynamic Swiggy-inspired food ordering web app built using **React.js**, **Redux Toolkit**, **Tailwind CSS**, and **custom hooks**. Designed for performance, scalability, and modular code.
 
-1. Default Export/Import
-   export default Component;
-   import Component from "path"
-2. Names Export/Import
-   export const Component;
-   import {Component} from "path";
+---
 
-# React Hooks
+## 📖 About The Project
 
-They are normal JS functions.
-There are multiple react hooks.
-2 important react hooks
+This project simulates a real-world online food delivery platform with features like restaurant browsing, dynamic menus, cart functionality, and search capabilities. Built for learning React best practices—component-driven development, hooks, routing, and Redux store integration.
 
-- useState() - super power state varaible and import using named import [eg. {useState}]
-- useEffect() -
+---
 
-Routing in WEB apps
+## 💡 Technologies Used
 
-- Client side routing - Not making any network call when moving towards the page. It just load the component(About, Contact). It only make network call the fetch the API.(Single Page Application)
-- Server side routing - We have a about.html, contact.html page if we click the anchor tag (/about) it reload the whole page and send the network call to About.html(this About.html coming from server) and fetched that page and renders that to web page.
+### 🖥️ Frontend Technologies
 
-# Redux Toolkit
+| Technology                                                                                                       | Description                                    |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white)                        | For building the user interface                |
+| ![Redux](https://img.shields.io/badge/Redux-764ABC?style=flat&logo=redux&logoColor=white)                        | For state management                           |
+| ![Tailwind](https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)        | Utility-first CSS styling                      |
+| ![React Router](https://img.shields.io/badge/React%20Router-CA4245?style=flat&logo=react-router&logoColor=white) | For client-side routing                        |
+| ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat&logo=jest&logoColor=white)                           | Testing framework                              |
+| ![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=flat)               | For testing UI components                      |
+| ![Context API](https://img.shields.io/badge/Context--API-007ACC?style=flat&logo=react&logoColor=white)           | For user data sharing without prop drilling    |
+| ![Lazy Load](https://img.shields.io/badge/Lazy%20Loading-blue?style=flat)                                        | Dynamic import-based code splitting            |
+| ![Custom Hooks](https://img.shields.io/badge/Custom%20Hooks-ff69b4?style=flat)                                   | Encapsulate logic like online status, menu API |
 
-    - Install @reduxjs/toolkit and  react-redux(we need this two lib to work with redux)
-    - Build our store
-    - Connect our store to our app
-    - Slice(cartSlice)
-    - Dispatch(action)
-    - Selector(read the data)
+---
 
-# Types of Testing (developer)
+## 🔙 Backend Technologies (planned for future versions)
 
-    - Unit Tesing
-    - Integration Testing
-    - End to End Testing - e2e testing
+| Technology                                                                                          | Description                    |
+| --------------------------------------------------------------------------------------------------- | ------------------------------ |
+| ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)     | JavaScript runtime environment |
+| ![Express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)  | For building RESTful APIs      |
+| ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)     | NoSQL database                 |
+| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=JSON%20web%20tokens&logoColor=white) | For authentication             |
+| ![Bcrypt](https://img.shields.io/badge/Bcrypt-3467eb?style=flat)                                    | Password hashing               |
 
-# Setting Up Testing in our App
+---
 
-    - Install React Testing Library
-    - Installed Jest
-    - Installed Babel dependencies
-    - Configure Babel
-    - Configure Parcel Config file to disable default Babel transpilation
-    - Jest Configuration (BY npx jest --init)
-    - Install jsdom library
-    - Install @babel/preset-react - to make JSX work in test cases
-    - Include @babel/preset-react inside my babel config
-    - Install @testing-library/jest-dom - to make sure toBeInTheDocument() will work
+## 🗂️ Key Features
+
+- 🧭 **Dynamic Restaurant Listing** – List fetched from Swiggy-style API.
+- 🔍 **Search Filter** – Search restaurants by name.
+- ⭐ **Top Rated Filter** – Show restaurants with ratings above 4.5.
+- 🧾 **Restaurant Menu Page** – Detailed menu for each restaurant.
+- ➕ **Cart Functionality** – Add/remove items with Redux Toolkit.
+- 💾 **Persisted State** – Redux store keeps track of added items.
+- 🔃 **Offline Detection** – Custom hook `useOnlineStatus`.
+- 🔄 **Reusable Custom Hook** – `useRestaurantMenu` to fetch menu dynamically.
+
+---
+
+## 🧪 Testing
+
+- Unit tests available for:
+  - `Header`
+  - `Cart`
+  - `RestaurantCard`
+  - `Contact`
+- Mock data used from JSON files for test cases
+
+```bash
+npm test
+```
