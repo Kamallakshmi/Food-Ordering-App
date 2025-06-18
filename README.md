@@ -53,6 +53,65 @@ This project simulates a real-world online food delivery platform with features 
 
 ---
 
+## 🌟 Features & Highlights
+
+### 🧭 Core Frontend Features
+
+- 🍽️ **Dynamic Restaurant Listing** – Real-time restaurant data fetched via API
+- 🔍 **Search Functionality** – Live filtering of restaurants based on search text
+- ⭐ **Top Rated Filter** – Filters restaurants with rating above 4.5
+- 🧾 **Dynamic Menu Rendering** – Menus load based on restaurant selection with route params
+
+---
+
+### 🛒 Cart Management with Redux Toolkit
+
+- ➕ **Add to Cart** – Dynamically add items from menu to cart
+- 🛒 **Persistent Cart State** – Centralized state management using Redux Toolkit
+- ❌ **Clear Cart Button** – One-click cart reset using dispatch actions
+- 🧠 **Smart State Subscription** – Efficient component re-renders using `useSelector`
+
+---
+
+### 🎣 Custom Hooks & Context API
+
+- 🌐 **`useOnlineStatus`** – Displays offline message if internet is disconnected
+- 🍴 **`useRestaurantMenu`** – Reusable data-fetching logic for restaurant menu API
+- 👤 **Context API Integration** – Global user context for managing username
+
+---
+
+### 🎨 UI/UX Enhancements with Tailwind CSS
+
+- 🌈 **Utility-First Styling** – Built entirely with Tailwind CSS for responsive design
+- 🎯 **Component-Based Layout** – Modular components like `RestaurantCard`, `ItemList`, `RestaurantCategory`
+- 🧩 **Responsive Grid System** – Cards and lists adapt fluidly across screen sizes
+- 💬 **Clean Forms** – Styled inputs for username and contact pages
+
+---
+
+### ⚛️ React Ecosystem Features
+
+- 🧩 **React Router DOM** – SPA routing for Home, About, Contact, Grocery, and Menu pages
+- 📦 **Lazy Loading** – Components like `Grocery` loaded on-demand using `React.lazy` & `Suspense`
+- ⚡ **Conditional Rendering** – Smart rendering with fallback Shimmer UI
+- 🧪 **Unit Testing** – Component tests using Jest and React Testing Library
+
+---
+
+### 🚀 Performance & Scalability
+
+- 📦 **Code Splitting** – Reduces bundle size by loading components only when needed
+- ⚠️ **Error Boundary UI** – Custom error page via `Error.js` component
+- 🔍 **Optimized Rendering** – Key props used in list mapping to minimize unnecessary re-renders
+- ⚙️ **Production Ready Setup** – Easily deployable to Vercel or Netlify
+
+---
+
+> ✨ This frontend-focused architecture ensures smooth performance, modularity, and scalability for a real-world food delivery app.
+
+---
+
 ## 🧪 Testing
 
 - Unit tests available for:
