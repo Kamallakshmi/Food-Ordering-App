@@ -114,12 +114,26 @@ This project simulates a real-world online food delivery platform with features 
 
 ## 🧪 Testing
 
-- Unit tests available for:
-  - `Header`
-  - `Cart`
-  - `RestaurantCard`
-  - `Contact`
-- Mock data used from JSON files for test cases
+This project includes unit and integration tests to ensure the stability and correctness of core UI components and interactions.
+
+### 🔬 Frameworks & Tools
+
+- **Jest** – JavaScript testing framework for running test suites
+- **React Testing Library** – Used for rendering components and simulating user interactions
+- **Mock JSON Data** – Simulated Swiggy API responses for reliable test environments
+
+### ✅ Components Covered
+
+| Component        | Tested Behavior                                  |
+| ---------------- | ------------------------------------------------ |
+| `Header`         | Logo visibility, navigation links, cart count    |
+| `Cart`           | Add/remove items, clear cart, empty cart message |
+| `RestaurantCard` | Dynamic data rendering (name, cuisine, rating)   |
+| `Contact`        | Form inputs and submit button presence           |
+| `Search`         | Search bar functionality and filtered results    |
+| `sum.js`         | Sample utility logic for demo unit test          |
+
+### 🧪 Sample Test Command
 
 ```bash
 npm test
